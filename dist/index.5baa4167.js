@@ -2982,7 +2982,7 @@ const HeadingComponent = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>setAsad("BOOOM ITS CHANGED BY giUSESTATE HOOK"),
+                        onClick: ()=>setAsad("BOOOM ITS CHANGED BY USESTATE HOOK"),
                         className: "w-40  border p-2 bg-blue-300 rounded-md font-medium text-2xl",
                         children: "Change Title"
                     }, void 0, false, {

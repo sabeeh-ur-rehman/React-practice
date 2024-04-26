@@ -16,7 +16,7 @@ const HeadingComponent = () => {
           {asad}
         </h1>
         <button
-          onClick={() => setAsad("BOOOM ITS CHANGED BY giUSESTATE HOOK")}
+          onClick={() => setAsad("BOOOM ITS CHANGED BY USESTATE HOOK")}
           className="w-40  border p-2 bg-blue-300 rounded-md font-medium text-2xl"
         >
           Change Title
