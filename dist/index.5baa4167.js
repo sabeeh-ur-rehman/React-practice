@@ -34273,7 +34273,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-red-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
+        className: "bg-green-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-4xl bg-white rounded-md p-4",
@@ -34329,7 +34329,7 @@ const Error = ()=>{
                 children: "Opps !!!"
             }, void 0, false, {
                 fileName: "src/components/error.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34337,7 +34337,7 @@ const Error = ()=>{
                 children: "Something Went Wrong"
             }, void 0, false, {
                 fileName: "src/components/error.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34345,13 +34345,13 @@ const Error = ()=>{
                 children: err.status + " : " + err.statusText
             }, void 0, false, {
                 fileName: "src/components/error.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/error.js",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 7
     }, undefined);
 };
@@ -34430,7 +34430,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Contact = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-red-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
+        className: "bg-purple-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-4xl bg-white rounded-md p-4",
