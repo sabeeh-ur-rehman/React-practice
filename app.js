@@ -8,7 +8,7 @@ import Error from "./src/components/error";
 import Body from "./src/components/body";
 import Contact from "./src/components/contact";
 
-const HeadingComponent = () => {
+const Applayout = () => {
   
 
   return (
@@ -24,7 +24,7 @@ const appRouter = createBrowserRouter(
   [
     {
       path: "/",
-      element: <HeadingComponent/>,
+      element: <Applayout/>,
       errorElement: <Error/>,
       children : [ 
         { 

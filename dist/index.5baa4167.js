@@ -2968,7 +2968,7 @@ var _body = require("./src/components/body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _contact = require("./src/components/contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
-const HeadingComponent = ()=>{
+const Applayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.Header), {}, void 0, false, {
@@ -2993,11 +2993,11 @@ const HeadingComponent = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_c = HeadingComponent;
+_c = Applayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "app.js",
             lineNumber: 27,
             columnNumber: 16
@@ -3044,7 +3044,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     columnNumber: 13
 }, undefined));
 var _c;
-$RefreshReg$(_c, "HeadingComponent");
+$RefreshReg$(_c, "Applayout");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {
@@ -27401,7 +27401,7 @@ var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
 var _reactRouterDom = require("react-router-dom");
 const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-blue-400 flex p-2 justify-between h-16",
+        className: "bg-cyan-900 flex p-2 justify-between h-16",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: "/",
@@ -27425,7 +27425,7 @@ const Header = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "cursor-pointer bg-blue-300 p-2 px-3 border border-white rounded-md ",
+                            className: "cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ",
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
@@ -27440,7 +27440,7 @@ const Header = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/about",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "cursor-pointer bg-blue-300 p-2 px-3 border border-white rounded-md ",
+                            className: "cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ",
                             children: "About"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
@@ -27457,7 +27457,7 @@ const Header = ()=>{
                         children: [
                             " ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "cursor-pointer bg-blue-300 p-2 px-3 border border-white rounded-md ",
+                                className: "cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ",
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "src/components/header.js",
@@ -27477,7 +27477,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "border p-2 bg-blue-300 rounded-md font-medium text-2xl",
+                className: "border p-2 bg-[#E7493B] rounded-md text-white font-medium text-2xl",
                 children: "Subscribe"
             }, void 0, false, {
                 fileName: "src/components/header.js",
@@ -34244,7 +34244,7 @@ parcelHelpers.export(exports, "Footer", ()=>Footer);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "h-12 bg-blue-400 font-medium text-center text-white tracking-wide p-3",
+        className: "h-12 bg-cyan-900 font-medium text-center text-white tracking-wide p-3",
         children: "Created By Sabeeh Ur Rehman."
     }, void 0, false, {
         fileName: "src/components/footer.js",
@@ -34273,7 +34273,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-green-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
+        className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-4xl bg-white rounded-md p-4",
@@ -34285,7 +34285,7 @@ const About = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-2xl bg-white rounded-md p-4 m-4",
-                children: "THis is about section of the test website."
+                children: "This is about section of the test website."
             }, void 0, false, {
                 fileName: "src/components/about.js",
                 lineNumber: 9,
@@ -34381,7 +34381,7 @@ const Body = ()=>{
     _s();
     const [asad, setAsad] = (0, _react.useState)("THIS IS INITIAL TITLE");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("body", {
-        className: " gap-y-6 bg-red-300 p-20 h-[calc(100vh-112px)] flex flex-col items-center",
+        className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "bg-white rounded-md p-8 text-center font-bold text-4xl",
@@ -34393,7 +34393,7 @@ const Body = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setAsad("BOOOM ITS CHANGED BY USESTATE HOOK"),
-                className: "w-40  border p-2 bg-blue-300 rounded-md font-medium text-2xl",
+                className: "w-40  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
                 children: "Change Title"
             }, void 0, false, {
                 fileName: "src/components/body.js",
@@ -34430,11 +34430,11 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Contact = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-purple-300 flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
+        className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "text-4xl bg-white rounded-md p-4",
-                children: "contact Section"
+                children: "Contact Section"
             }, void 0, false, {
                 fileName: "src/components/contact.js",
                 lineNumber: 8,
@@ -34442,7 +34442,7 @@ const Contact = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-2xl bg-white rounded-md p-4 m-4",
-                children: "THis is contact section of the test website."
+                children: "This is contact section of the test website."
             }, void 0, false, {
                 fileName: "src/components/contact.js",
                 lineNumber: 9,
