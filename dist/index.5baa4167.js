@@ -2966,8 +2966,8 @@ var _error = require("./src/components/error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _body = require("./src/components/body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
-var _contact = require("./src/components/contact");
-var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _dogs = require("./src/components/Dogs");
+var _dogsDefault = parcelHelpers.interopDefault(_dogs);
 const Applayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -3025,8 +3025,8 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 }, undefined)
             },
             {
-                path: "/contact",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                path: "/Dogs",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dogsDefault.default), {}, void 0, false, {
                     fileName: "app.js",
                     lineNumber: 40,
                     columnNumber: 20
@@ -3051,7 +3051,7 @@ $RefreshReg$(_c, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/about":"adsiP","./src/components/error":"14UOH","./src/components/body":"fxbaO","./src/components/contact":"kLvWg"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/about":"adsiP","./src/components/error":"14UOH","./src/components/body":"fxbaO","./src/components/Dogs":"kcY9H"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27420,7 +27420,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: "  font-sm text-2xl flex items-center gap-3  ",
+                className: " ml-16  font-sm text-2xl flex items-center gap-3  ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/",
@@ -27438,36 +27438,36 @@ const Header = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/Dogs",
+                        children: [
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ",
+                                children: "Random Dogs"
+                            }, void 0, false, {
+                                fileName: "src/components/header.js",
+                                lineNumber: 18,
+                                columnNumber: 27
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/about",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             className: "cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ",
                             children: "About"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
-                            lineNumber: 19,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/header.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        to: "/contact",
-                        children: [
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ",
-                                children: "Contact Us"
-                            }, void 0, false, {
-                                fileName: "src/components/header.js",
-                                lineNumber: 23,
-                                columnNumber: 30
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/header.js",
-                        lineNumber: 23,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -34274,25 +34274,15 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-4xl bg-white rounded-md p-4",
-                children: "About Section"
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-2xl bg-white rounded-md p-4 m-4",
-                children: "This is about section of the test website."
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            className: "text-2xl bg-white rounded-md p-4 m-4",
+            children: "This is a beautiful website to show the loyalty of Dogs."
+        }, void 0, false, {
+            fileName: "src/components/about.js",
+            lineNumber: 9,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/about.js",
         lineNumber: 7,
         columnNumber: 9
@@ -34379,9 +34369,9 @@ var _react = require("react");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [asad, setAsad] = (0, _react.useState)("THIS IS INITIAL TITLE");
+    const [asad, setAsad] = (0, _react.useState)("All dogs are loyal ?");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("body", {
-        className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center",
+        className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center justify-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "bg-white rounded-md p-8 text-center font-bold text-4xl",
@@ -34392,9 +34382,9 @@ const Body = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>setAsad("BOOOM ITS CHANGED BY USESTATE HOOK"),
-                className: "w-40  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
-                children: "Change Title"
+                onClick: ()=>setAsad("You cant change my mind, Yes all dogs are loyal"),
+                className: "w-60  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
+                children: "Change My Mind"
             }, void 0, false, {
                 fileName: "src/components/body.js",
                 lineNumber: 12,
@@ -34407,7 +34397,7 @@ const Body = ()=>{
         columnNumber: 9
     }, undefined);
 };
-_s(Body, "to1fP2B8cNX1zWAi2/bsDsNlyl0=");
+_s(Body, "vu3YMtEbdb0H40TJxelay3hrlD8=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34418,53 +34408,67 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kLvWg":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c69a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kcY9H":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d5e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c69a.prelude(module);
+$parcel$ReactRefreshHelpers$d5e0.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Contact = ()=>{
+var _react = require("react");
+var _s = $RefreshSig$();
+const Dogs = ()=>{
+    _s();
+    let [dogImage, setDogImage] = (0, _react.useState)(null);
+    const fetchDogImage = async ()=>{
+        const response = await fetch("https://dog.ceo/api/breeds/image/random");
+        const data = await response.json();
+        setDogImage(data.message);
+    };
+    (0, _react.useEffect)(()=>{
+        fetchDogImage();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-4xl bg-white rounded-md p-4",
-                children: "Contact Section"
+            dogImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "w-[400px] h-[250px] border rounded-md ",
+                src: dogImage
             }, void 0, false, {
-                fileName: "src/components/contact.js",
-                lineNumber: 8,
-                columnNumber: 13
+                fileName: "src/components/Dogs.js",
+                lineNumber: 19,
+                columnNumber: 20
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-2xl bg-white rounded-md p-4 m-4",
-                children: "This is contact section of the test website."
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "w-80  border p-2 bg-[#E7493B] text-white rounded-md font-medium mt-4 text-2xl",
+                onClick: fetchDogImage,
+                children: "Change Dog Image"
             }, void 0, false, {
-                fileName: "src/components/contact.js",
-                lineNumber: 9,
-                columnNumber: 13
+                fileName: "src/components/Dogs.js",
+                lineNumber: 20,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/contact.js",
-        lineNumber: 7,
-        columnNumber: 9
+        fileName: "src/components/Dogs.js",
+        lineNumber: 18,
+        columnNumber: 5
     }, undefined);
 };
-_c = Contact;
-exports.default = Contact;
+_s(Dogs, "FvfIajUNDztziL+Flt6SPPDBWFo=");
+_c = Dogs;
+exports.default = Dogs;
 var _c;
-$RefreshReg$(_c, "Contact");
+$RefreshReg$(_c, "Dogs");
 
-  $parcel$ReactRefreshHelpers$c69a.postlude(module);
+  $parcel$ReactRefreshHelpers$d5e0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequire77dd")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequire77dd")
 
 //# sourceMappingURL=index.5baa4167.js.map

@@ -10,19 +10,19 @@ export const Header = () => {
         alt="logo"
       /></Link>
 
-      <ul className="  font-sm text-2xl flex items-center gap-3  ">
+      <ul className=" ml-16  font-sm text-2xl flex items-center gap-3  ">
         <Link to="/"><li className="cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ">
           Home
+        </li>
+        </Link>
+        <Link to="/Dogs"> <li className="cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ">
+          Random Dogs
         </li>
         </Link>
         <Link to="/about">
           <li className="cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ">
             About
           </li>
-        </Link>
-        <Link to="/contact"> <li className="cursor-pointer text-white bg-[#E7493B] p-2 px-3 border border-white rounded-md ">
-          Contact Us
-        </li>
         </Link>
       </ul>
 
