@@ -1,12 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDom from "react-dom";
 import { Header } from "/src/components/header";
 import { Footer } from "./src/components/footer";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import About from "./src/components/about";
+const Dogs = lazy(()=> import("./src/components/Dogs") )
 import Error from "./src/components/error";
 import Body from "./src/components/body";
-import Dogs from "./src/components/Dogs";
+import Cards from "./src/components/cards";
+// import Dogs from "./src/components/Dogs";
+
 
 const Applayout = () => {
   
@@ -28,16 +30,19 @@ const appRouter = createBrowserRouter(
       errorElement: <Error/>,
       children : [ 
         { 
-          path: "/about",
-          element: <About/>
-        },
-        { 
           path: "/",
           element: <Body/>
         },
         { 
           path: "/Dogs",
-          element: <Dogs/>
+          element:
+          <Suspense fallback={<h1>this is loading</h1>}>
+            <Dogs/>
+          </Suspense>
+        },
+        { 
+          path: "/cards",
+          element: <Cards/>
         }
       ]
    }

@@ -2960,75 +2960,89 @@ var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _header = require("/src/components/header");
 var _footer = require("./src/components/footer");
 var _reactRouterDom = require("react-router-dom");
-var _about = require("./src/components/about");
-var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _error = require("./src/components/error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _body = require("./src/components/body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
-var _dogs = require("./src/components/Dogs");
-var _dogsDefault = parcelHelpers.interopDefault(_dogs);
+var _cards = require("./src/components/cards");
+var _cardsDefault = parcelHelpers.interopDefault(_cards);
+const Dogs = /*#__PURE__*/ (0, _react.lazy)(()=>require("2383fe585211658c"));
+_c = Dogs;
+// import Dogs from "./src/components/Dogs";
 const Applayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.Header), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 17,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer.Footer), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 18,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
-_c = Applayout;
+_c1 = Applayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "app.js",
-            lineNumber: 27,
+            lineNumber: 29,
             columnNumber: 16
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "app.js",
-            lineNumber: 28,
+            lineNumber: 30,
             columnNumber: 21
         }, undefined),
         children: [
             {
-                path: "/about",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 32,
-                    columnNumber: 20
-                }, undefined)
-            },
-            {
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "app.js",
-                    lineNumber: 36,
+                    lineNumber: 34,
                     columnNumber: 20
                 }, undefined)
             },
             {
                 path: "/Dogs",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dogsDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
+                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "this is loading"
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 39,
+                        columnNumber: 31
+                    }, void 0),
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Dogs, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 40,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
                     fileName: "app.js",
-                    lineNumber: 40,
+                    lineNumber: 39,
+                    columnNumber: 11
+                }, undefined)
+            },
+            {
+                path: "/cards",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardsDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 45,
                     columnNumber: 20
                 }, undefined)
             }
@@ -3040,18 +3054,19 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 49,
+    lineNumber: 54,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "Applayout");
+var _c, _c1;
+$RefreshReg$(_c, "Dogs");
+$RefreshReg$(_c1, "Applayout");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/about":"adsiP","./src/components/error":"14UOH","./src/components/body":"fxbaO","./src/components/Dogs":"kcY9H"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/about":"adsiP","./src/components/error":"14UOH","./src/components/body":"fxbaO","2383fe585211658c":"5H5DJ","./src/components/cards":"kZUEy"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27399,7 +27414,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _logoJpg = require("../components/logo.jpg");
 var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
 var _reactRouterDom = require("react-router-dom");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const isOnline = (0, _useOnlineDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "bg-cyan-900 flex p-2 justify-between h-16",
         children: [
@@ -27411,12 +27431,12 @@ const Header = ()=>{
                     alt: "logo"
                 }, void 0, false, {
                     fileName: "src/components/header.js",
-                    lineNumber: 7,
+                    lineNumber: 9,
                     columnNumber: 20
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/header.js",
-                lineNumber: 7,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27429,12 +27449,12 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
-                            lineNumber: 14,
+                            lineNumber: 16,
                             columnNumber: 22
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/header.js",
-                        lineNumber: 14,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27446,34 +27466,45 @@ const Header = ()=>{
                                 children: "Random Dogs"
                             }, void 0, false, {
                                 fileName: "src/components/header.js",
-                                lineNumber: 18,
+                                lineNumber: 20,
                                 columnNumber: 27
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/header.js",
-                        lineNumber: 18,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        to: "/about",
+                        to: "/cards",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             className: "cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ",
-                            children: "About"
+                            children: "Cards"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
-                            lineNumber: 23,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/header.js",
-                        lineNumber: 22,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/header.js",
-                lineNumber: 13,
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "flex items-center text-white",
+                children: [
+                    " Status ",
+                    isOnline ? "\u2714\uFE0F" : "\u274C"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/header.js",
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27481,16 +27512,21 @@ const Header = ()=>{
                 children: "Subscribe"
             }, void 0, false, {
                 fileName: "src/components/header.js",
-                lineNumber: 29,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/header.js",
-        lineNumber: 6,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "XQZuNqwLTT5c423yVrgGXkXVqoc=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
 _c = Header;
 var _c;
 $RefreshReg$(_c, "Header");
@@ -27500,7 +27536,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../components/logo.jpg":"6DVrN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"6DVrN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../components/logo.jpg":"6DVrN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","../utils/useOnline":"74Yls"}],"6DVrN":[function(require,module,exports) {
 module.exports = require("ff0c21bd94887448").getBundleURL("1G2bZ") + "logo.0f7d2fda.jpg" + "?" + Date.now();
 
 },{"ff0c21bd94887448":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -34231,7 +34267,39 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bjsug":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"74Yls":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$03b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$03b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnline = ()=>{
+    _s();
+    const [isOnline, setIsOnline] = (0, _react.useState)(true);
+    (0, _react.useEffect)(()=>{
+        window.addEventListener("online", ()=>{
+            setIsOnline(true);
+        });
+        window.addEventListener("offline", ()=>{
+            setIsOnline(false);
+        });
+    }, []);
+    return isOnline;
+};
+_s(useOnline, "mRBquyBAMh60D2Q5WI/A8/L/7j4=");
+exports.default = useOnline;
+
+  $parcel$ReactRefreshHelpers$03b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bjsug":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f161 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34276,7 +34344,7 @@ const About = ()=>{
         className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
             className: "text-2xl bg-white rounded-md p-4 m-4",
-            children: "This is a beautiful website to show the loyalty of Dogs."
+            children: "This is about section of website."
         }, void 0, false, {
             fileName: "src/components/about.js",
             lineNumber: 9,
@@ -34366,10 +34434,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [asad, setAsad] = (0, _react.useState)("All dogs are loyal ?");
+    const [asad, setAsad] = (0, _react.useState)("initial statement");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("body", {
         className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center justify-center",
         children: [
@@ -34378,26 +34448,26 @@ const Body = ()=>{
                 children: asad
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 9,
+                lineNumber: 14,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>setAsad("You cant change my mind, Yes all dogs are loyal"),
-                className: "w-60  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
-                children: "Change My Mind"
+                onClick: ()=>setAsad("state changed by useState Hook"),
+                className: "w-30  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
+                children: "see magic"
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 12,
+                lineNumber: 17,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/body.js",
-        lineNumber: 8,
+        lineNumber: 13,
         columnNumber: 9
     }, undefined);
 };
-_s(Body, "vu3YMtEbdb0H40TJxelay3hrlD8=");
+_s(Body, "5PREcrbDSWo7GE16CANoYeOXNIw=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34408,63 +34478,139 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kcY9H":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d5e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/useOnline":"74Yls"}],"5H5DJ":[function(require,module,exports) {
+module.exports = require("799e2ed1d76ce536")(require("8d51e0fca1b6972f").getBundleURL("1G2bZ") + "Dogs.dab972a7.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("kcY9H"));
+
+},{"799e2ed1d76ce536":"61B45","8d51e0fca1b6972f":"lgJ39"}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
+
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {};
+var cachedPreloads = {};
+var cachedPrefetches = {};
+function getCache(type) {
+    switch(type){
+        case "preload":
+            return cachedPreloads;
+        case "prefetch":
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
+}
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}],"kZUEy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2539 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d5e0.prelude(module);
+$parcel$ReactRefreshHelpers$2539.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-const Dogs = ()=>{
+const Cards = ()=>{
     _s();
-    let [dogImage, setDogImage] = (0, _react.useState)(null);
-    const fetchDogImage = async ()=>{
-        const response = await fetch("https://dog.ceo/api/breeds/image/random");
-        const data = await response.json();
-        setDogImage(data.message);
-    };
+    const [products, setProducts] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
-        fetchDogImage();
+        const fetchProducts = async ()=>{
+            const response = await fetch("https://fakestoreapi.com/products");
+            const data = await response.json();
+            setProducts(data);
+        };
+        fetchProducts();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
-        children: [
-            dogImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "w-[400px] h-[250px] border rounded-md ",
-                src: dogImage
-            }, void 0, false, {
-                fileName: "src/components/Dogs.js",
-                lineNumber: 19,
-                columnNumber: 20
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "w-80  border p-2 bg-[#E7493B] text-white rounded-md font-medium mt-4 text-2xl",
-                onClick: fetchDogImage,
-                children: "Change Dog Image"
-            }, void 0, false, {
-                fileName: "src/components/Dogs.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Dogs.js",
-        lineNumber: 18,
+        className: "cards-container gap-4 p-4 flex h-[calc(100vh-112px)] flex-wrap",
+        children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "card border border-2 border-black rounded-md p-2 h-[200px] w-[100px]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: product.image
+                    }, void 0, false, {
+                        fileName: "src/components/cards.js",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            "Price: $",
+                            product.price
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/cards.js",
+                        lineNumber: 23,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, product.id, true, {
+                fileName: "src/components/cards.js",
+                lineNumber: 21,
+                columnNumber: 9
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/cards.js",
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
-_s(Dogs, "FvfIajUNDztziL+Flt6SPPDBWFo=");
-_c = Dogs;
-exports.default = Dogs;
+_s(Cards, "f86L6rLANGURv6GE6gupp7+oOp4=");
+_c = Cards;
+exports.default = Cards;
 var _c;
-$RefreshReg$(_c, "Dogs");
+$RefreshReg$(_c, "Cards");
 
-  $parcel$ReactRefreshHelpers$d5e0.postlude(module);
+  $parcel$ReactRefreshHelpers$2539.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

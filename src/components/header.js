@@ -1,7 +1,9 @@
 import logo from "../components/logo.jpg";
 import {Link}  from "react-router-dom"; 
+import useOnline from "../utils/useOnline";
 
 export const Header = () => {
+  const isOnline = useOnline();
   return (
     <div className="bg-cyan-900 flex p-2 justify-between h-16">
       <Link to="/"><img
@@ -19,12 +21,13 @@ export const Header = () => {
           Random Dogs
         </li>
         </Link>
-        <Link to="/about">
+        <Link to="/cards">
           <li className="cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ">
-            About
+            Cards
           </li>
         </Link>
       </ul>
+      <h1 className="flex items-center text-white"> Status {isOnline ? "✔️" : "❌"}</h1>
 
       <button className="border p-2 bg-[#E7493B] rounded-md text-white font-medium text-2xl">
         Subscribe
