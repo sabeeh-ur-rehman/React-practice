@@ -3066,7 +3066,7 @@ $RefreshReg$(_c1, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/about":"adsiP","./src/components/error":"14UOH","./src/components/body":"fxbaO","2383fe585211658c":"5H5DJ","./src/components/cards":"kZUEy"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/error":"14UOH","./src/components/body":"fxbaO","2383fe585211658c":"5H5DJ","./src/components/cards":"kZUEy"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -34312,7 +34312,7 @@ parcelHelpers.export(exports, "Footer", ()=>Footer);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "h-12 bg-cyan-900 font-medium text-center text-white tracking-wide p-3",
+        className: "h-12 bg-cyan-900 font-bold text-center text-white tracking-wide p-3",
         children: "Created By Sabeeh Ur Rehman."
     }, void 0, false, {
         fileName: "src/components/footer.js",
@@ -34325,43 +34325,6 @@ var _c;
 $RefreshReg$(_c, "Footer");
 
   $parcel$ReactRefreshHelpers$f161.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"adsiP":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6418 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6418.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-[#90AEAE] flex flex-col justify-center items-center text-center h-[calc(100vh-112px)] ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            className: "text-2xl bg-white rounded-md p-4 m-4",
-            children: "This is about section of website."
-        }, void 0, false, {
-            fileName: "src/components/about.js",
-            lineNumber: 9,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/about.js",
-        lineNumber: 7,
-        columnNumber: 9
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$6418.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -34571,9 +34534,9 @@ const Cards = ()=>{
         fetchProducts();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "cards-container gap-4 p-4 flex h-[calc(100vh-112px)] flex-wrap",
+        className: "cards-container m-6 gap-4  grid-cols-6 grid-rows-4 grid",
         children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "card border border-2 border-black rounded-md p-2 h-[200px] w-[100px]",
+                className: "card bg-orange-50 shadow-md shadow-orange-600 flex flex-col justify-between  rounded-md p-2 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         src: product.image
@@ -34583,6 +34546,7 @@ const Cards = ()=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold",
                         children: [
                             "Price: $",
                             product.price

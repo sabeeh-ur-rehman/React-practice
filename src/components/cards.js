@@ -16,11 +16,11 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="cards-container gap-4 p-4 flex h-[calc(100vh-112px)] flex-wrap">
+    <div className="cards-container m-6 gap-4  grid-cols-6 grid-rows-4 grid">
       {products.map((product) => (
-        <div key={product.id} className="card border border-2 border-black rounded-md p-2 h-[200px] w-[100px]">
+        <div key={product.id} className="card bg-orange-50 shadow-md shadow-orange-600 flex flex-col justify-between  rounded-md p-2 ">
           <img src={product.image} />
-          <span>Price: ${product.price}</span>
+          <span className='font-bold'>Price: ${product.price}</span>
         </div>
       ))}
     </div>
