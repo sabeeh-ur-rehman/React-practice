@@ -30,7 +30,7 @@ export const Header = () => {
       <h1 className="flex items-center text-white"> Status {isOnline ? "✔️" : "❌"}</h1>
 
       <button className="border p-2 bg-[#E7493B] rounded-md text-white font-medium text-2xl">
-        Subscribe
+        Subscribe               
       </button>
     </div>
   );
