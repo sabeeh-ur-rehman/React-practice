@@ -2966,9 +2966,10 @@ var _body = require("./src/components/body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _cards = require("./src/components/cards");
 var _cardsDefault = parcelHelpers.interopDefault(_cards);
+var _about = require("./src/components/about");
+var _aboutDefault = parcelHelpers.interopDefault(_about);
 const Dogs = /*#__PURE__*/ (0, _react.lazy)(()=>require("2383fe585211658c"));
 _c = Dogs;
-// import Dogs from "./src/components/Dogs";
 const Applayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -3045,6 +3046,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     lineNumber: 45,
                     columnNumber: 20
                 }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 49,
+                    columnNumber: 20
+                }, undefined)
             }
         ]
     }
@@ -3054,7 +3063,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 54,
+    lineNumber: 58,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -3066,7 +3075,7 @@ $RefreshReg$(_c1, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","./src/components/error":"14UOH","./src/components/body":"fxbaO","2383fe585211658c":"5H5DJ","./src/components/cards":"kZUEy"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","/src/components/header":"aorvA","./src/components/footer":"bjsug","react-router-dom":"9xmpe","2383fe585211658c":"5H5DJ","./src/components/error":"14UOH","./src/components/body":"fxbaO","./src/components/cards":"kZUEy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/about":"adsiP"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27232,175 +27241,7 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"aorvA":[function(require,module,exports) {
+},{}],"aorvA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7672 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27416,10 +27257,14 @@ var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
 var _reactRouterDom = require("react-router-dom");
 var _useOnline = require("../utils/useOnline");
 var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _react = require("react");
+var _userContext = require("../utils/userContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     const isOnline = (0, _useOnlineDefault.default)();
+    const { user } = (0, _react.useContext)((0, _userContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "bg-cyan-900 flex p-2 justify-between h-16",
         children: [
@@ -27431,12 +27276,12 @@ const Header = ()=>{
                     alt: "logo"
                 }, void 0, false, {
                     fileName: "src/components/header.js",
-                    lineNumber: 9,
+                    lineNumber: 14,
                     columnNumber: 20
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/header.js",
-                lineNumber: 9,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27449,12 +27294,12 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
-                            lineNumber: 16,
+                            lineNumber: 21,
                             columnNumber: 22
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/header.js",
-                        lineNumber: 16,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27466,13 +27311,13 @@ const Header = ()=>{
                                 children: "Random Dogs"
                             }, void 0, false, {
                                 fileName: "src/components/header.js",
-                                lineNumber: 20,
+                                lineNumber: 25,
                                 columnNumber: 27
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/header.js",
-                        lineNumber: 20,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27482,47 +27327,79 @@ const Header = ()=>{
                             children: "Cards"
                         }, void 0, false, {
                             fileName: "src/components/header.js",
-                            lineNumber: 25,
+                            lineNumber: 30,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/header.js",
-                        lineNumber: 24,
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/about",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "cursor-pointer bg-[#E7493B] text-white p-2 px-3 border border-white rounded-md ",
+                            children: "About"
+                        }, void 0, false, {
+                            fileName: "src/components/header.js",
+                            lineNumber: 35,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-white",
+                        children: user.name
+                    }, void 0, false, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/header.js",
-                lineNumber: 15,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "flex items-center text-white",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex gap-2",
                 children: [
-                    " Status ",
-                    isOnline ? "\u2714\uFE0F" : "\u274C"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "flex items-center text-white",
+                        children: [
+                            " Status ",
+                            isOnline ? "\u2714\uFE0F" : "\u274C"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 44,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "border p-2 bg-[#E7493B] rounded-md text-white font-medium text-2xl",
+                        children: "Subscribe"
+                    }, void 0, false, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 47,
+                        columnNumber: 7
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/header.js",
-                lineNumber: 30,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "border p-2 bg-[#E7493B] rounded-md text-white font-medium text-2xl",
-                children: "Subscribe"
-            }, void 0, false, {
-                fileName: "src/components/header.js",
-                lineNumber: 32,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/header.js",
-        lineNumber: 8,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "XQZuNqwLTT5c423yVrgGXkXVqoc=", false, function() {
+_s(Header, "Hve5uLBk2p3JuC0k12dYgOIjp8w=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -27536,7 +27413,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../components/logo.jpg":"6DVrN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","../utils/useOnline":"74Yls"}],"6DVrN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../components/logo.jpg":"6DVrN","react-router-dom":"9xmpe","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utils/userContext":"eBA1b"}],"6DVrN":[function(require,module,exports) {
 module.exports = require("ff0c21bd94887448").getBundleURL("1G2bZ") + "logo.0f7d2fda.jpg" + "?" + Date.now();
 
 },{"ff0c21bd94887448":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -34267,7 +34144,37 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"74Yls":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"74Yls":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$03b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34295,6 +34202,167 @@ _s(useOnline, "mRBquyBAMh60D2Q5WI/A8/L/7j4=");
 exports.default = useOnline;
 
   $parcel$ReactRefreshHelpers$03b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"786KC"}],"eBA1b":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$268f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$268f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const UserContext = /*#__PURE__*/ (0, _react.createContext)({
+    user: {
+        name: "sabeeh",
+        email: "xyz@gmail.com"
+    }
+});
+exports.default = UserContext;
+
+  $parcel$ReactRefreshHelpers$268f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -34329,119 +34397,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"14UOH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$de60 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$de60.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-const Error = ()=>{
-    const err = (0, _reactRouterDom.useRouteError);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " bg-red-300 flex flex-col justify-center items-center text-center h-screen",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-4xl bg-white rounded-md p-4",
-                children: "Opps !!!"
-            }, void 0, false, {
-                fileName: "src/components/error.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-2xl bg-white rounded-md p-4 m-4",
-                children: "Something Went Wrong"
-            }, void 0, false, {
-                fileName: "src/components/error.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-2xl bg-white rounded-md p-4",
-                children: err.status + " : " + err.statusText
-            }, void 0, false, {
-                fileName: "src/components/error.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/error.js",
-        lineNumber: 8,
-        columnNumber: 7
-    }, undefined);
-};
-_c = Error;
-exports.default = Error;
-var _c;
-$RefreshReg$(_c, "Error");
-
-  $parcel$ReactRefreshHelpers$de60.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"fxbaO":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3ad2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3ad2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _useOnline = require("../utils/useOnline");
-var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
-var _s = $RefreshSig$();
-const Body = ()=>{
-    _s();
-    const [asad, setAsad] = (0, _react.useState)("initial statement");
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("body", {
-        className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center justify-center",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "bg-white rounded-md p-8 text-center font-bold text-4xl",
-                children: asad
-            }, void 0, false, {
-                fileName: "src/components/body.js",
-                lineNumber: 14,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>setAsad("state changed by useState Hook"),
-                className: "w-30  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
-                children: "see magic"
-            }, void 0, false, {
-                fileName: "src/components/body.js",
-                lineNumber: 17,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/body.js",
-        lineNumber: 13,
-        columnNumber: 9
-    }, undefined);
-};
-_s(Body, "5PREcrbDSWo7GE16CANoYeOXNIw=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$3ad2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/useOnline":"74Yls"}],"5H5DJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5H5DJ":[function(require,module,exports) {
 module.exports = require("799e2ed1d76ce536")(require("8d51e0fca1b6972f").getBundleURL("1G2bZ") + "Dogs.dab972a7.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
@@ -34509,7 +34465,119 @@ module.exports = function(loader, type) {
     };
 };
 
-},{}],"kZUEy":[function(require,module,exports) {
+},{}],"14UOH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$de60 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$de60.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+const Error = ()=>{
+    const err = (0, _reactRouterDom.useRouteError);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " bg-red-300 flex flex-col justify-center items-center text-center h-screen",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-4xl bg-white rounded-md p-4",
+                children: "Opps !!!"
+            }, void 0, false, {
+                fileName: "src/components/error.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-2xl bg-white rounded-md p-4 m-4",
+                children: "Something Went Wrong"
+            }, void 0, false, {
+                fileName: "src/components/error.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-2xl bg-white rounded-md p-4",
+                children: err.status + " : " + err.statusText
+            }, void 0, false, {
+                fileName: "src/components/error.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/error.js",
+        lineNumber: 8,
+        columnNumber: 7
+    }, undefined);
+};
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$de60.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fxbaO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3ad2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3ad2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _s = $RefreshSig$();
+const Body = ()=>{
+    _s();
+    const [asad, setAsad] = (0, _react.useState)("initial statement");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("body", {
+        className: " gap-y-6 bg-[#90AEAE] p-20 h-[calc(100vh-112px)] flex flex-col items-center justify-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "bg-white rounded-md p-8 text-center font-bold text-4xl",
+                children: asad
+            }, void 0, false, {
+                fileName: "src/components/body.js",
+                lineNumber: 14,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setAsad("state changed by useState Hook"),
+                className: "w-30  border p-2 bg-[#E7493B] text-white rounded-md font-medium text-2xl",
+                children: "see magic"
+            }, void 0, false, {
+                fileName: "src/components/body.js",
+                lineNumber: 17,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/body.js",
+        lineNumber: 13,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Body, "5PREcrbDSWo7GE16CANoYeOXNIw=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$3ad2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZUEy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2539 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34527,7 +34595,7 @@ const Cards = ()=>{
     const [products, setProducts] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         const fetchProducts = async ()=>{
-            const response = await fetch("https://fakestoreapi.com/products");
+            const response = await fetch("https://fakestoreapi.com/products/");
             const data = await response.json();
             setProducts(data);
         };
@@ -34535,33 +34603,35 @@ const Cards = ()=>{
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "cards-container m-6 gap-4  grid-cols-6 grid-rows-4 grid",
-        children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "card bg-orange-50 shadow-md shadow-orange-600 flex flex-col justify-between  rounded-md p-2 ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: product.image
-                    }, void 0, false, {
-                        fileName: "src/components/cards.js",
-                        lineNumber: 22,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "font-bold",
-                        children: [
-                            "Price: $",
-                            product.price
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/cards.js",
-                        lineNumber: 23,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, product.id, true, {
-                fileName: "src/components/cards.js",
-                lineNumber: 21,
-                columnNumber: 9
-            }, undefined))
+        children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: `card bg-orange-50 shadow-md shadow-orange-600 flex flex-col justify-between  rounded-md p-2 `,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: product.image
+                        }, void 0, false, {
+                            fileName: "src/components/cards.js",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold",
+                            children: [
+                                "Price: $",
+                                product.price
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/cards.js",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, product.id, true, {
+                    fileName: "src/components/cards.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false))
     }, void 0, false, {
         fileName: "src/components/cards.js",
         lineNumber: 19,
@@ -34575,6 +34645,107 @@ var _c;
 $RefreshReg$(_c, "Cards");
 
   $parcel$ReactRefreshHelpers$2539.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"adsiP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6418 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6418.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const Section = ({ title, description, isVisible, setIsVisible })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " p-2  gap-2",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-2xl",
+                children: title
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined),
+            isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setIsVisible(false),
+                className: "w-40  border p-2 bg-[#E7493B] text-white rounded-md font-medium mt-4 text-2xl",
+                children: "Hide"
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 9,
+                columnNumber: 11
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>setIsVisible(true),
+                className: "w-40  border p-2 bg-[#E7493B] text-white rounded-md font-medium mt-4 text-2xl",
+                children: "Show"
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 12,
+                columnNumber: 11
+            }, undefined),
+            isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: description
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 18,
+                columnNumber: 23
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/about.js",
+        lineNumber: 5,
+        columnNumber: 8
+    }, undefined);
+};
+_c = Section;
+const About = ()=>{
+    _s();
+    const [visibleSection, setVisibleSection] = (0, _react.useState)("about");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "bg-[#90AEAE]",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "About",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est aepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellatAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa  eniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cul qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque n  , omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                isVisible: visibleSection === "about",
+                setIsVisible: ()=>setVisibleSection("about")
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 29,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "Team",
+                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam liberoe, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitakkkepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellatAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                isVisible: visibleSection === "team",
+                setIsVisible: ()=>setVisibleSection("team")
+            }, void 0, false, {
+                fileName: "src/components/about.js",
+                lineNumber: 38,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/about.js",
+        lineNumber: 28,
+        columnNumber: 9
+    }, undefined);
+};
+_s(About, "wh1TE+dhWcpPUgmVT6wj5rR3ipk=");
+_c1 = About;
+exports.default = About;
+var _c, _c1;
+$RefreshReg$(_c, "Section");
+$RefreshReg$(_c1, "About");
+
+  $parcel$ReactRefreshHelpers$6418.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

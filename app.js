@@ -7,7 +7,7 @@ const Dogs = lazy(()=> import("./src/components/Dogs") )
 import Error from "./src/components/error";
 import Body from "./src/components/body";
 import Cards from "./src/components/cards";
-// import Dogs from "./src/components/Dogs";
+import About from "./src/components/about";
 
 
 const Applayout = () => {
@@ -43,6 +43,10 @@ const appRouter = createBrowserRouter(
         { 
           path: "/cards",
           element: <Cards/>
+        },
+        { 
+          path: "/about",
+          element: <About/>
         }
       ]
    }

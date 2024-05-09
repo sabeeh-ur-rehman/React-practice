@@ -292,6 +292,10 @@ img, video {
   height: 100vh;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-80 {
   width: 20rem;
 }
@@ -330,6 +334,10 @@ img, video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-2 {
+  gap: .5rem;
 }
 
 .gap-3 {
