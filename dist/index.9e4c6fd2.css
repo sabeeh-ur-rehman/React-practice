@@ -336,6 +336,10 @@ img, video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-2 {
   gap: .5rem;
 }
@@ -448,6 +452,10 @@ img, video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .tracking-wide {

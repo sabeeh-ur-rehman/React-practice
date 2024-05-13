@@ -8,17 +8,21 @@ import Error from "./src/components/error";
 import Body from "./src/components/body";
 import Cards from "./src/components/cards";
 import About from "./src/components/about";
+import { Provider } from "react-redux"; 
+import store from "./src/utils/store";
 
 
 const Applayout = () => {
   
 
   return (
-    <div>
+    <>
+      <Provider store={store}>
       <Header />
       <Outlet/>
       <Footer />
-    </div>
+      </Provider>
+      </>
   );
 };
 
